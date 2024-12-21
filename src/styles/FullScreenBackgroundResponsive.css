@@ -1,0 +1,19 @@
+@media (100px <= width <= 542px) {
+  .firstbackground-container,
+  .secondbackground-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .artistic-image-container,
+  .living-image-container,
+  .accesories-image-container,
+  .kitchen-image-container {
+    width: 100% !important;
+  }
+}

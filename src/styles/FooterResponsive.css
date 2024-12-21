@@ -1,0 +1,5 @@
+@media (100px <= width <= 452px) {
+  .logo img {
+    width: 15%;
+  }
+}

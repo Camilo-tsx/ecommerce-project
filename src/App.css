@@ -1,0 +1,111 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  font-family: "Raleway", serif;
+}
+
+@media (1760px <= width <= 1948px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+
+@media (1532px <= width <= 1759px) {
+  html {
+    font-size: 13px !important;
+  }
+}
+
+@media (1327px <= width <= 1531px) {
+  html {
+    font-size: 12px !important;
+  }
+}
+
+@media (1216px <= width <= 1326px) {
+  html {
+    font-size: 11px !important;
+  }
+}
+
+@media (1000px <= width <= 1215px) {
+  html {
+    font-size: 8px !important;
+  }
+}
+
+@media (890px <= width <= 999px) {
+  html {
+    font-size: 8px !important;
+  }
+}
+
+@media (760px <= width <= 889px) {
+  html {
+    font-size: 7px !important;
+  }
+}
+
+@media (709px <= width <= 759px) {
+  html {
+    font-size: 6px !important;
+  }
+}
+
+@media (383px <= width <= 708px) {
+  html {
+    font-size: 6px !important;
+  }
+}
+
+@media (322px <= width <= 382px) {
+  html {
+    font-size: 5px !important;
+  }
+}
+
+@media (292px <= width <= 321px) {
+  html {
+    font-size: 4px !important;
+  }
+}
+
+@media (228px <= width <= 291px) {
+  html {
+    font-size: 3px !important;
+  }
+}
+
+@media (100px <= width <= 227px) {
+  html {
+    font-size: 2px !important;
+  }
+}

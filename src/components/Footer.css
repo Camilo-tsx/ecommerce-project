@@ -1,0 +1,124 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border-radius: 3px;
+  padding: 1rem;
+  background-color: #f8f8f8;
+}
+
+.logo {
+  border-top: 1px solid rgb(201, 201, 201);
+}
+
+.logo img {
+  width: 8.5%;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.p-container p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.form-group {
+  position: relative;
+  width: 40%;
+  display: grid;
+  grid-template-areas: "input";
+  align-items: center !important;
+}
+
+label {
+  text-decoration: none;
+  grid-area: input;
+  z-index: 10;
+  width: max-content;
+  height: 100%;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  transform-origin: left center;
+  transition: transform 0.5s;
+  font-size: 0.9rem;
+}
+
+.form-control.is-invalid {
+  border: 1px solid rgb(225, 132, 132) !important;
+}
+
+.form-control.is-invalid:focus {
+  border: 1px solid rgb(225, 132, 132) !important;
+  outline: none; /* Opción adicional */
+}
+
+.form-control {
+  grid-area: input;
+  width: 100%;
+  height: 2.5rem;
+  border: solid 1px black !important;
+}
+
+.error {
+  position: absolute;
+  top: 2.7rem;
+  left: 0;
+  color: red;
+  font-weight: 400;
+  font-size: 0.75rem;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+
+.form-control:focus + label,
+.form-control:not(:placeholder-shown) + label {
+  transform: translateY(calc(-50% - 0.6rem)) scale(0.7);
+}
+
+.submit-button {
+  width: 7rem;
+  margin-left: 0.5rem;
+  border-radius: 3px;
+  padding: 0.3rem;
+  letter-spacing: 2.5px;
+  font-weight: 450;
+  background-color: rgb(52, 52, 52);
+  color: white;
+  transition: background-color 0.3s ease-in-out;
+  border: none;
+  font-size: 1rem;
+}
+
+.submit-button:hover {
+  background: rgb(90, 90, 90);
+}
+
+.social-container {
+  border-bottom: 1px solid rgb(201, 201, 201);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-container div {
+  display: flex;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+.social-container p {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
