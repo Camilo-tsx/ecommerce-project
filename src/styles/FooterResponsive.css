@@ -4,8 +4,8 @@
   }
 
   .p-container {
-    display: flex !important;
-    justify-content: center !important;
+    display: flex;
+    justify-content: center;
   }
 
   .form-container {
@@ -18,7 +18,7 @@
   }
 
   .form-group {
-    width: 100%;
+    width: 70%;
   }
 
   .error {
