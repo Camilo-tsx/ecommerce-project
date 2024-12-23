@@ -1,6 +1,6 @@
 import CustomForm from "./custom-form/CustomForm";
-import "./Footer.css";
 import logo from "../assets/images/logo.png";
+import "./Footer.css";
 import "../styles/FooterResponsive.css";
 
 export const Footer = () => {

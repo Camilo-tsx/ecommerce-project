@@ -1,8 +1,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import InputForm from "../Custominput";
 import { z } from "zod";
 import "../Footer.css";
+import InputForm from "../Custominput";
 
 const schema = z.object({
   email: z.string().min(1, "Debes ingresar un correo").email("Correo invalido"),

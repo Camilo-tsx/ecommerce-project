@@ -60,7 +60,7 @@
   opacity: 1;
 }
 
-h2 {
+.global-background-container h2 {
   position: absolute;
   display: flex;
   align-items: center;
@@ -69,10 +69,10 @@ h2 {
   font-family: "Raleway", serif;
   text-align: center;
   border: solid 1px beige;
-  font-weight: 350 !important;
-  width: 30%;
+  font-weight: 350;
+  width: 35%;
   height: 4.5rem;
-  font-size: 1.3rem !important;
+  font-size: 1.3rem;
   letter-spacing: 2px;
   transition:
     background-color 0.3s ease-in-out,
@@ -80,7 +80,7 @@ h2 {
   background-color: transparent; /* Sin fondo por defecto */
 }
 
-h3 {
+.global-background-container h3 {
   position: absolute;
   top: 60%;
   z-index: 2;
@@ -88,7 +88,7 @@ h3 {
   color: beige;
   text-decoration: underline;
   text-underline-offset: 0.4rem;
-  font-size: 0.8rem !important;
+  font-size: 0.8rem;
 }
 
 .artistic-image-container:hover::before,
