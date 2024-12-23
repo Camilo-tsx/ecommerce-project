@@ -1,5 +1,5 @@
 import { Control, Controller, FieldError } from "react-hook-form";
-import "./Footer.css";
+import "../Footer/Footer.css";
 
 interface Props {
   name: string;

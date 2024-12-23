@@ -1,8 +1,8 @@
 import { useState } from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../../assets/images/logo.png";
+import { navLinks } from "../../constants";
 import "./Header.css";
-import { navLinks } from "../constants";
-import "../styles/BurgerMenuResponsive.css";
+import "./BurgerMenuResponsive.css";
 
 export const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);

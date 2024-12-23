@@ -1,8 +1,8 @@
-import artistic from "../assets/images/artistic-image.jpg";
-import kitchen from "../assets/images/kitchen-home-image.jpeg";
-import living from "../assets/images/livingroom-image.jpg";
-import accesories from "../assets/images/accesories-image.jpg";
-import "../styles/FullScreenBackgroundResponsive.css";
+import artistic from "../../assets/images/artistic-image.jpg";
+import kitchen from "../../assets/images/kitchen-home-image.jpeg";
+import living from "../../assets/images/livingroom-image.jpg";
+import accesories from "../../assets/images/accesories-image.jpg";
+import "./FullScreenBackgroundResponsive.css";
 import "./FullScreenBackground.css";
 
 export const FullScreenBackGround = () => {
