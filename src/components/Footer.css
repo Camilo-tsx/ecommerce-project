@@ -15,6 +15,16 @@
   width: 8.5%;
 }
 
+.p-container {
+  display: flex;
+  justify-content: start;
+}
+
+.p-container p {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
 .form-container {
   display: flex;
   align-items: center;
@@ -25,11 +35,6 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-}
-
-.p-container p {
-  font-size: 0.9rem;
-  font-weight: 400;
 }
 
 .form-group {

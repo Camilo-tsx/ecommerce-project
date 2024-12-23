@@ -10,10 +10,26 @@
     padding: 0;
   }
 
-  .artistic-image-container,
-  .living-image-container,
-  .accesories-image-container,
-  .kitchen-image-container {
-    width: 100% !important;
+  .global-background-container .artistic-image-container,
+  .global-background-container .living-image-container,
+  .global-background-container .accesories-image-container,
+  .global-background-container .kitchen-image-container {
+    width: 100%;
+  }
+
+  .global-background-container .artistic-image-container h2,
+  .global-background-container .living-image-container h2,
+  .global-background-container .accesories-image-container h2,
+  .global-background-container .kitchen-image-container h2 {
+    width: 70%;
+    height: 30%;
+  }
+
+  .global-background-container .artistic-image-container h3,
+  .global-background-container .living-image-container h3,
+  .global-background-container .accesories-image-container h3,
+  .global-background-container .kitchen-image-container h3 {
+    font-size: 0.7rem;
+    top: 70%;
   }
 }

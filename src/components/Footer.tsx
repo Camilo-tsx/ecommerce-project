@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="logo">
         <img src={logo} alt="logo" />
       </div>
-      <div className="p-container d-flex justify-content-start">
+      <div className="p-container">
         <p>Quiero recibir descuentos exclusivos</p>
       </div>
       <div className="form-container">

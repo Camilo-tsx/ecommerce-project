@@ -1,52 +1,20 @@
 @media (600px <= width <= 800px) {
   .menu-container {
-    width: 30% !important;
+    width: 30%;
   }
 }
 
 @media (100px <= width <= 452px) {
-  .burger-menu {
-    font-size: 2rem;
-  }
-
   .menu-container {
-    width: 90%;
+    width: 95%;
     height: 90%;
   }
 
   .image-Logo {
-    width: 19%;
+    width: 30%;
   }
 
   .ul-links {
     align-items: center;
-  }
-
-  a {
-    font-size: 3rem;
-    font-weight: 400;
-  }
-}
-
-@media (100px <= width <= 350px) {
-  .ul-links {
-    align-items: center;
-  }
-
-  .burger-menu {
-    font-size: 2rem;
-  }
-
-  .close-icon {
-    font-size: 1.7rem;
-  }
-
-  .close-button p {
-    font-size: 1.7rem;
-  }
-
-  a {
-    font-size: 2rem;
-    font-weight: 500;
   }
 }
