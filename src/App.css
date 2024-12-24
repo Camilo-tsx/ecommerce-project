@@ -36,7 +36,7 @@ html {
   font-size: 10px;
 }
 
-@media (100px <= width <= 452px) {
+@media (100px <= width <= 916px) {
   html {
     font-size: 19px;
   }

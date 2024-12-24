@@ -1,10 +1,4 @@
-@media (600px <= width <= 800px) {
-  .menu-container {
-    width: 30%;
-  }
-}
-
-@media (100px <= width <= 452px) {
+@media (100px <= width <= 916px) {
   .menu-container {
     width: 95%;
     height: 90%;
