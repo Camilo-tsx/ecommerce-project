@@ -1,11 +1,11 @@
-import artistic from "../../assets/images/artistic-image.jpg";
-import kitchen from "../../assets/images/kitchen-home-image.jpeg";
-import living from "../../assets/images/livingroom-image.jpg";
-import accesories from "../../assets/images/accesories-image.jpg";
-import "./FullScreenBackgroundResponsive.css";
-import "./FullScreenBackground.css";
+import artistic from "../assets/images/artistic-image.jpg";
+import kitchen from "../assets/images/kitchen-home-image.jpeg";
+import living from "../assets/images/livingroom-image.jpg";
+import accesories from "../assets/images/accesories-image.jpg";
+import "./HomeResponsive.css";
+import "./Home.css";
 
-export const FullScreenBackGround = () => {
+export const Home = () => {
   return (
     <div className="global-background-container">
       <div className="firstbackground-container">

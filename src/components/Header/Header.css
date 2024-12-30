@@ -20,6 +20,13 @@
   top: 0px;
 }
 
+.cart-icon {
+  position: relative;
+  font-size: 1.7rem;
+  right: 3rem;
+  cursor: pointer;
+}
+
 .menu-container {
   position: fixed;
   top: 0.5rem;

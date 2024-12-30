@@ -33,7 +33,7 @@ body {
 }
 
 html {
-  font-size: 10px;
+  font-size: 17px;
 }
 
 @media (100px <= width <= 916px) {

@@ -1,13 +1,13 @@
 import "./App.css";
-import { Header } from "./components/Header/Header";
-import { FullScreenBackGround } from "./components/HomeBackground/FullSceenBackground";
 import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { AppRouter } from "./Routes/AppRouter";
 
 function App() {
   return (
     <>
       <Header />
-      <FullScreenBackGround />
+      <AppRouter />
       <Footer />
     </>
   );

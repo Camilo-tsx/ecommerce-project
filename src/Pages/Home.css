@@ -109,5 +109,5 @@
 .living-image-container:hover h2,
 .accesories-image-container:hover h2,
 .kitchen-image-container:hover h2 {
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
+  background-color: rgba(0, 0, 0, 0.4);
 }

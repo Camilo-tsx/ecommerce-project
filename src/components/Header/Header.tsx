@@ -15,6 +15,7 @@ export const Header = () => {
     <div className="header-container">
       <i className="bi bi-list burger-menu" onClick={toggleMenu}></i>
       <img className="image-Logo" src={logo} alt="image-logo" />
+      <i className="bi bi-bag-check cart-icon"></i>
       <div
         className={`menu-container ${
           menuIsOpen ? "menu-is-open" : "menu-is-closed"
