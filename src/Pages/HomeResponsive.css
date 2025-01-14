@@ -1,3 +1,19 @@
+@media (916px <= width <= 1441px) {
+  .global-background-container .artistic-image-container h2,
+  .global-background-container .living-image-container h2,
+  .global-background-container .accesories-image-container h2,
+  .global-background-container .kitchen-image-container h2 {
+    width: 54%;
+    height: 25%;
+  }
+
+  .global-background-container .artistic-image-container h3,
+  .global-background-container .living-image-container h3,
+  .global-background-container .accesories-image-container h3,
+  .global-background-container .kitchen-image-container h3 {
+    top: 65%;
+  }
+}
 @media (100px <= width <= 916px) {
   .firstbackground-container,
   .secondbackground-container {

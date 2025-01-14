@@ -30,7 +30,7 @@ export const Header = () => {
         <div>
           <ul className="ul-links">
             {navLinks.map(links => (
-              <a href={links.href} key={links.href}>
+              <a href={links.href} key={links.key}>
                 {links.label}
               </a>
             ))}

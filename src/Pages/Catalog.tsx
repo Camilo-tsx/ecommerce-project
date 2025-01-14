@@ -1,66 +1,56 @@
-import catalog from "../assets/images/image-catalog-example.jpg";
-import "./Catalog.css";
+import { useState } from "react";
+import { products as initialProducts } from "../Products/ProductList";
+import { Products } from "../Products/Products";
+import { Filter } from "../components/Filter/Filter";
+
+type Order = "default" | "asc-price" | "desc-price" | "best-sellers";
+
+interface FilterPorductsProps {
+  category: string;
+  sortOrder: Order;
+}
 
 export const Catalog = () => {
+  const [products] = useState(initialProducts);
+  const [filters, setFilters] = useState<FilterPorductsProps>({
+    category: "deco-home",
+    sortOrder: "default",
+  });
+
+  const filterProducts = (products: typeof initialProducts) => {
+    let filtered = products.filter(product => {
+      return (
+        filters.category === "all" || product.category === filters.category
+      );
+    });
+
+    if (filters.sortOrder === "asc-price") {
+      filtered = filtered.sort((a, b) => a.price - b.price);
+    } else if (filters.sortOrder === "desc-price") {
+      filtered = filtered.sort((a, b) => b.price - a.price);
+    } else if (filters.sortOrder === "best-sellers") {
+      filtered = filtered.sort((a, b) => b.sells - a.sells);
+    }
+
+    return filtered;
+  };
+
+  const handleFilter = (order: Order) => {
+    setFilters(prevFilters => ({
+      ...prevFilters,
+      sortOrder: order,
+    }));
+  };
+
+  const filteredProducts = filterProducts(products);
+
   return (
     <>
       <div className="catalog-header">
         <p className="category">DECO PARA TODO TU HOGAR</p>
-        <p>Esto es el filtro</p>
+        <Filter parenthMethod={handleFilter} />
       </div>
-      <div className="catalog-container">
-        <div className="catalog-card">
-          <div className="catalog-item">
-            <img src={catalog} alt="image-example" />
-            <div className="catalog-item-cart">
-              <p>Agregar al carrito</p>
-            </div>
-          </div>
-          <div className="catalog-item-description">
-            <p className="item-description">MACETA DE SEXO SEXUAL</p>
-            <p className="item-price">$13200</p>
-          </div>
-        </div>
-
-        <div className="catalog-card">
-          <div className="catalog-item">
-            <img src={catalog} alt="image-example" />
-            <div className="catalog-item-cart">
-              <p>Agregar al carrito</p>
-            </div>
-          </div>
-          <div className="catalog-item-description">
-            <p className="item-description">MACETA DE SEXO SEXUAL</p>
-            <p className="item-price">$13200</p>
-          </div>
-        </div>
-
-        <div className="catalog-card">
-          <div className="catalog-item">
-            <img src={catalog} alt="image-example" />
-            <div className="catalog-item-cart">
-              <p>Agregar al carrito</p>
-            </div>
-          </div>
-          <div className="catalog-item-description">
-            <p className="item-description">MACETA DE SEXO SEXUAL</p>
-            <p className="item-price">$13200</p>
-          </div>
-        </div>
-
-        <div className="catalog-card">
-          <div className="catalog-item">
-            <img src={catalog} alt="image-example" />
-            <div className="catalog-item-cart">
-              <p>Agregar al carrito</p>
-            </div>
-          </div>
-          <div className="catalog-item-description">
-            <p className="item-description">MACETA DE SEXO SEXUAL</p>
-            <p className="item-price">$13200</p>
-          </div>
-        </div>
-      </div>
+      <Products products={filteredProducts} />
     </>
   );
 };
