@@ -10,24 +10,36 @@ export const Home = () => {
   return (
     <div className="global-background-container">
       <div className="firstbackground-container">
-        <Link to="/catalog" className="artistic-image-container">
+        <Link
+          to="/catalog?category=deco-arte"
+          className="artistic-image-container"
+        >
           <img className="w-100 h-100" src={artistic} alt="catalog-image" />
           <h2>Deco Arte</h2>
           <h3>Descubrir</h3>
         </Link>
-        <Link to="/catalog" className="living-image-container">
+        <Link
+          to="/catalog?category=deco-home"
+          className="living-image-container"
+        >
           <img className="w-100 h-100" src={living} alt="catalog-image" />
           <h2>Deco Home</h2>
           <h3>Descubrir</h3>
         </Link>
       </div>
       <div className="secondbackground-container">
-        <Link to="/catalog" className="kitchen-image-container">
+        <Link
+          to="/catalog?category=kitchen"
+          className="kitchen-image-container"
+        >
           <img className="w-100 h-100" src={kitchen} alt="catalog-image" />
           <h2>Cocina</h2>
           <h3>Descubrir</h3>
         </Link>
-        <Link to="/catalog" className="accesories-image-container">
+        <Link
+          to="/catalog?category=accesories"
+          className="accesories-image-container"
+        >
           <img className="w-100 h-100" src={accesories} alt="catalog-image" />
           <h2>Accesorios</h2>
           <h3>Descubrir</h3>

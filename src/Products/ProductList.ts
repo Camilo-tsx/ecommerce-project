@@ -82,4 +82,29 @@ export const products: ProductsProps[] = [
     category: "deco-arte",
     sells: 0,
   },
+  {
+    id: 10,
+    description: "Maceta de sexo sexual",
+    price: 100,
+    src: catalog,
+    category: "kitchen",
+    sells: 0,
+  },
+
+  {
+    id: 11,
+    description: "Maceta de sexo sexual",
+    price: 150,
+    src: catalog,
+    category: "accesories",
+    sells: 0,
+  },
+  {
+    id: 12,
+    description: "Maceta de sexo sexual",
+    price: 350,
+    src: catalog,
+    category: "accesories",
+    sells: 0,
+  },
 ];

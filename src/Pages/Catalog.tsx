@@ -2,6 +2,7 @@ import { useState } from "react";
 import { products as initialProducts } from "../Products/ProductList";
 import { Products } from "../Products/Products";
 import { Filter } from "../components/Filter/Filter";
+import { useSearchParams } from "react-router-dom";
 
 type Order = "default" | "asc-price" | "desc-price" | "best-sellers";
 
@@ -13,15 +14,16 @@ interface FilterPorductsProps {
 export const Catalog = () => {
   const [products] = useState(initialProducts);
   const [filters, setFilters] = useState<FilterPorductsProps>({
-    category: "deco-home",
+    category: "all",
     sortOrder: "default",
   });
+  const [searchParams] = useSearchParams();
+
+  const category = searchParams.get("category") || "all";
 
   const filterProducts = (products: typeof initialProducts) => {
     let filtered = products.filter(product => {
-      return (
-        filters.category === "all" || product.category === filters.category
-      );
+      return category === "all" || product.category === category;
     });
 
     if (filters.sortOrder === "asc-price") {
@@ -42,12 +44,28 @@ export const Catalog = () => {
     }));
   };
 
+  const getCategoryText = (category: string) => {
+    switch (category) {
+      case "kitchen":
+        return "DECO PARA TU COCINA";
+      case "deco-home":
+        return "DECO PARA TU HOGAR";
+      case "deco-arte":
+        return "El ARTE EN TU HOGAR";
+      case "accesories":
+        return "ACCESORIOS";
+      case "all":
+      default:
+        return "TODO EN DECO";
+    }
+  };
+
   const filteredProducts = filterProducts(products);
 
   return (
     <>
       <div className="catalog-header">
-        <p className="category">DECO PARA TODO TU HOGAR</p>
+        <p className="category">{getCategoryText(category)}</p>
         <Filter parenthMethod={handleFilter} />
       </div>
       <Products products={filteredProducts} />
