@@ -1,6 +1,6 @@
 import catalog from "../assets/images/image-catalog-example.jpg";
 
-interface ProductsProps {
+export interface ProductsProps {
   id: number;
   description: string;
   price: number;

@@ -18,11 +18,15 @@ export const Footer = () => {
       <div className="social-container">
         <div>
           <p>Contáctanos:</p>
-          <i className="bi bi-whatsapp"></i>
+          <a href="">
+            <i className="bi bi-whatsapp"></i>
+          </a>
         </div>
         <div>
           <p>Siguenos en instagram:</p>
-          <i className="bi bi-instagram"></i>
+          <a href="">
+            <i className="bi bi-instagram"></i>
+          </a>
         </div>
       </div>
     </div>

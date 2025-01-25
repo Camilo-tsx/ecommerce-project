@@ -8,7 +8,7 @@
 .image-Logo {
   position: relative;
   margin: 0 auto;
-  width: 7.3%;
+  width: 13%;
   cursor: pointer;
 }
 
@@ -30,22 +30,37 @@
 .menu-container {
   position: fixed;
   top: 0.5rem;
-  left: 0.5rem;
   width: 20vw;
   height: 75%;
   background-color: white;
-  transform: translateX(calc(-100% - 0.5rem));
   transition: transform 0.3s ease-in-out;
   z-index: 10;
   border-radius: 6px;
+  overflow: hidden;
 }
 
-.menu-is-open {
+.menu-container.left {
+  left: 0.5rem;
+}
+
+.menu-container.left.menu-is-open {
   transform: translateX(0);
 }
 
-.menu-is-closed {
+.menu-container.left.menu-is-closed {
   transform: translateX(calc(-100% - 0.5rem));
+}
+
+.menu-container.right {
+  right: 0.5rem;
+}
+
+.menu-container.right.menu-is-open {
+  transform: translateX(0);
+}
+
+.menu-container.right.menu-is-closed {
+  transform: translateX(calc(100% + 0.5rem));
 }
 
 .close-icon {

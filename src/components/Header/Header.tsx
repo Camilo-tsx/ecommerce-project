@@ -1,47 +1,34 @@
 import { useState } from "react";
 import logo from "../../assets/images/logo.png";
-import { navLinks } from "../../constants";
 import "./Header.css";
 import "./BurgerMenuResponsive.css";
+import { BurgerMenu } from "./BurgerMenu";
+import { Cart } from "./Cart";
+import { OverlayMenu } from "./OverlayMenu";
 
 export const Header = () => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
+  const [isBurgerMenuOpen, setIsBurgerMenuOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuIsOpen(!menuIsOpen);
+  const toggleCartMenu = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  const toggleBurgerMenu = () => {
+    setIsBurgerMenuOpen(!isBurgerMenuOpen);
   };
 
   return (
     <div className="header-container">
-      <i className="bi bi-list burger-menu" onClick={toggleMenu}></i>
-      <img className="image-Logo" src={logo} alt="image-logo" />
-      <i className="bi bi-bag-check cart-icon"></i>
-      <div
-        className={`menu-container ${
-          menuIsOpen ? "menu-is-open" : "menu-is-closed"
-        }`}
-      >
-        <div className="d-flex justify-content-start p-3">
-          <i className="bi bi-x-lg close-icon" onClick={toggleMenu}></i>
-          <button className="close-button" onClick={toggleMenu}>
-            <p>Cerrar</p>
-          </button>
-        </div>
-        <div>
-          <ul className="ul-links">
-            {navLinks.map(links => (
-              <a href={links.href} key={links.key}>
-                {links.label}
-              </a>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div>
-        {menuIsOpen && (
-          <div className="overlay-menu" onClick={toggleMenu}></div>
-        )}
-      </div>
+      <i className="bi bi-list burger-menu" onClick={toggleBurgerMenu}></i>
+      <a href="/" className="homelogo-link">
+        <img className="image-Logo" src={logo} alt="image-logo" />
+      </a>
+      <i className="bi bi-bag-check cart-icon" onClick={toggleCartMenu}></i>
+      <Cart menuIsOpen={isCartOpen} toggleMenu={toggleCartMenu} />
+      <BurgerMenu toggleMenu={toggleBurgerMenu} menuIsOpen={isBurgerMenuOpen} />
+      <OverlayMenu isOpen={isBurgerMenuOpen} onClose={toggleBurgerMenu} />
+      <OverlayMenu isOpen={isCartOpen} onClose={toggleCartMenu} />
     </div>
   );
 };
