@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useContext, useState } from "react";
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import { ProductsProps } from "../Products/ProductList";
 
 interface ContextType {
@@ -6,7 +12,8 @@ interface ContextType {
   setCart: React.Dispatch<React.SetStateAction<ProductsProps[]>>;
   addToCart: (product: ProductsProps) => void;
   clearCart: () => void;
-  removeItemFromCart: (product: ProductsProps) => void;
+  removeItemFromCart: (product: number) => void;
+  getSubtotal: () => number;
 }
 
 interface ContextProviderType {
@@ -16,23 +23,41 @@ interface ContextProviderType {
 export const CartContext = createContext<ContextType | null>(null);
 
 export const CartContextProvider = ({ children }: ContextProviderType) => {
-  const [cart, setCart] = useState<ProductsProps[]>([]);
+  const [cart, setCart] = useState<ProductsProps[]>(() => {
+    const storedCart = localStorage.getItem("cart");
+    return storedCart ? JSON.parse(storedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (product: ProductsProps) => {
     setCart(prevCart => [...prevCart, product]);
   };
 
-  const removeItemFromCart = (product: ProductsProps) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== product.id));
+  const removeItemFromCart = (indexProduct: number) => {
+    setCart(prevCart => prevCart.filter((_, index) => index !== indexProduct));
   };
 
   const clearCart = () => {
     setCart([]);
   };
 
+  const getSubtotal = () => {
+    return cart.reduce((total, product) => total + product.price, 0);
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, setCart, clearCart, removeItemFromCart }}
+      value={{
+        cart,
+        addToCart,
+        setCart,
+        clearCart,
+        removeItemFromCart,
+        getSubtotal,
+      }}
     >
       {children}
     </CartContext.Provider>

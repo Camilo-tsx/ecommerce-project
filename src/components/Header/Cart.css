@@ -41,6 +41,19 @@
   padding: 0;
 }
 
+.cart ul::-webkit-scrollbar {
+  width: 0.3rem;
+}
+
+.cart ul::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.cart ul::-webkit-scrollbar-thumb {
+  background: black;
+}
+
 .cart li {
   display: flex;
   align-items: start;
