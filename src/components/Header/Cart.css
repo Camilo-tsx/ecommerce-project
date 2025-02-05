@@ -35,6 +35,8 @@
 }
 
 .cart ul {
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   max-height: 25rem;
   margin-bottom: 1rem;
