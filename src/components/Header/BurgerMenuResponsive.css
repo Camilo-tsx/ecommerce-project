@@ -11,4 +11,8 @@
   .ul-links {
     align-items: center;
   }
+
+  .cart ul {
+    max-height: 19rem !important;
+  }
 }
