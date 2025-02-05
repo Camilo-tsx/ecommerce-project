@@ -41,6 +41,10 @@
   padding: 0;
 }
 
+.cart ul {
+  -webkit-overflow-scrolling: touch;
+}
+
 .cart ul::-webkit-scrollbar {
   width: 0.3rem;
 }
