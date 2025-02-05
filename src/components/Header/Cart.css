@@ -83,6 +83,10 @@
 .cart .cart-product-info button {
   background-color: transparent;
   border: none;
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .cart .cart-product-container p {
