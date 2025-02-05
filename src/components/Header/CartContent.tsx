@@ -18,7 +18,7 @@ export const CartContent = () => {
         <ul>
           {cart.map((product, index) => (
             <li key={index}>
-              <img src={product.src} alt="image-catalog" />
+              <img src={product.src[0]} alt="image-catalog" />
               <div className="cart-product-container">
                 <div className="cart-product-info">
                   <strong>{product.description}</strong>

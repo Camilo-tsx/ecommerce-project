@@ -19,6 +19,9 @@ export const Error404 = () => {
         </div>
         <div className="error-description">
           <p>Lo sentimos, la página que buscas no esta disponible</p>
+          <a href="/">
+            <button>Volver al inicio</button>
+          </a>
         </div>
       </div>
     </div>

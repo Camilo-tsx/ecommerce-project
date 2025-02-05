@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 import { useCartContext } from "../context/CartContext";
 import { products } from "./ProductList";
 import "./Products.css";
+import "./ProductsResponsive.css";
 
 interface ProductsComponentProps {
   products: typeof products;
@@ -14,7 +16,9 @@ export const Products = ({ products }: ProductsComponentProps) => {
         {products.map(product => (
           <div key={product.id} className="catalog-card">
             <div className="catalog-item">
-              <img src={product.src} alt="image-example" />
+              <Link to={"/product-details?id=" + product.id}>
+                <img src={product.src[0]} alt="image-example" />
+              </Link>
               <div
                 className="catalog-item-cart"
                 onClick={() => addToCart(product)}

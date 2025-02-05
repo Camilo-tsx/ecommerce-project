@@ -3,6 +3,7 @@ import { Products } from "../Products/Products";
 import { products as initialProducts } from "../Products/ProductList";
 import { useFilters, Order } from "../components/Filter/CustomFilterHook";
 import { Filter } from "../components/Filter/Filter";
+import "../Products/ProductsResponsive.css";
 
 export const Catalog = () => {
   const [products] = useState(initialProducts);

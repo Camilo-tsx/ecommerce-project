@@ -36,13 +36,13 @@ export const useFilters = () => {
 
   const getCategoryText = (category: string) => {
     switch (category) {
-      case "kitchen":
+      case "COCINA":
         return "DECO PARA TU COCINA";
-      case "deco-home":
+      case "DECO HOME":
         return "DECO PARA TU HOGAR";
-      case "deco-arte":
+      case "DECO ARTE":
         return "El ARTE EN TU HOGAR";
-      case "accesories":
+      case "ACCESORIOS":
         return "ACCESORIOS";
       case "all":
       default:

@@ -33,6 +33,7 @@
   align-items: center;
   z-index: 2;
   color: white;
+  border: 1px solid white;
 }
 
 .error-title {
@@ -43,9 +44,30 @@
 }
 
 .error-description {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   font-size: 14px;
   display: flex;
   justify-content: start;
   font-weight: 500;
+}
+
+.error-description a {
+  width: 100%;
+}
+
+.error-description button {
+  width: 100%;
+  padding: 0.2rem;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-weight: 650;
+  transition: 0.3s ease-in-out;
+}
+
+.error-description button:hover {
+  transform: scale(1.05);
 }
