@@ -23,34 +23,31 @@
 }
 
 @keyframes shrinkToHeader {
-  0% {
+  from {
     height: 100vh;
   }
-  100% {
+  to {
     height: 3.9rem;
     opacity: 1;
-    display: none;
   }
 }
 
 @keyframes shrinkLogo {
-  0% {
+  from {
     width: 20rem;
   }
-  100% {
+  to {
     width: 14%;
-    display: none;
   }
 }
 
 @media (100px <= width <= 916px) {
   @keyframes shrinkLogo {
-    0% {
+    from {
       width: 15rem;
     }
-    100% {
+    to {
       width: 30%;
-      display: none;
     }
   }
 }
