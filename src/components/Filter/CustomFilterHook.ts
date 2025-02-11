@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import { products as initialProducts } from "../../Products/ProductList";
+import { useGetParams } from "../SearchParamsCustomHook/useParams";
 
 export type Order = "default" | "asc-price" | "desc-price" | "best-sellers";
 
@@ -14,9 +14,7 @@ export const useFilters = () => {
     category: "all",
     sortOrder: "default",
   });
-  const [searchParams] = useSearchParams();
-
-  const category = searchParams.get("category") || "all";
+  const { category } = useGetParams();
 
   const filterProducts = (products: typeof initialProducts) => {
     let filtered = products.filter(product => {

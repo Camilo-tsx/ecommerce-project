@@ -1,11 +1,10 @@
 import { products } from "../Products/ProductList";
-import { useSearchParams } from "react-router-dom";
 import "./ImageCarousel.css";
 import { useRef } from "react";
+import { useGetParams } from "../components/SearchParamsCustomHook/useParams";
 
 export const ImageSlider = () => {
-  const [searchParams] = useSearchParams();
-  const id = Number(searchParams.get("id"));
+  const { id } = useGetParams();
 
   const product = products.find(p => p.id === id);
   const imageRefs = useRef<(HTMLImageElement | null)[]>([]);

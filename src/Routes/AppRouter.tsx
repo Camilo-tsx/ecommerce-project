@@ -3,6 +3,7 @@ import { Home } from "../Pages/Home";
 import { RoutesWithNotFound } from "../components/RoutesWithNotFound/RoutesWithNotFound";
 import { Catalog } from "../Pages/Catalog";
 import { ProductDetails } from "../Pages/ProductDetails";
+import { HomeAnimation } from "../components/HomeAnimation/HomeAnimation";
 
 export const AppRouter = () => {
   return (
@@ -11,6 +12,7 @@ export const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/product-details" element={<ProductDetails />} />
+        <Route path="/HomeAnimation" element={<HomeAnimation />} />
       </RoutesWithNotFound>
     </BrowserRouter>
   );

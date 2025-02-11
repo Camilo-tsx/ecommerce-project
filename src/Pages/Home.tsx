@@ -5,10 +5,12 @@ import living from "../assets/images/livingroom-image.jpg";
 import accesories from "../assets/images/accesories-image.jpg";
 import "./HomeResponsive.css";
 import "./Home.css";
+import { HomeAnimation } from "../components/HomeAnimation/HomeAnimation";
 
 export const Home = () => {
   return (
     <div className="global-background-container">
+      <HomeAnimation />
       <div className="firstbackground-container">
         <Link
           to="/catalog?category=DECO ARTE"

@@ -22,7 +22,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 2,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 2",
     price: 10000,
     src: [catalog, catalog2, catalog3],
     category: "DECO HOME",
@@ -30,7 +30,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 3,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 3",
     price: 300,
     src: [catalog, catalog2, catalog3],
     category: "DECO HOME",
@@ -38,7 +38,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 4,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 4",
     price: 9000,
     src: [catalog, catalog2, catalog3],
     category: "DECO HOME",
@@ -46,7 +46,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 5,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 5",
     price: 40000,
     src: [catalog, catalog2, catalog3],
     category: "DECO ARTE",
@@ -54,7 +54,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 6,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 6",
     price: 3350,
     src: [catalog, catalog2, catalog3],
     category: "DECO ARTE",
@@ -62,7 +62,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 7,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 7",
     price: 1000,
     src: [catalog, catalog2, catalog3],
     category: "DECO ARTE",
@@ -70,7 +70,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 8,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 8",
     price: 3230,
     src: [catalog, catalog2, catalog3],
     category: "DECO ARTE",
@@ -78,7 +78,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 9,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 9",
     price: 1332,
     src: [catalog, catalog2, catalog3],
     category: "DECO ARTE",
@@ -86,7 +86,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 10,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 10",
     price: 100,
     src: [catalog, catalog2, catalog3],
     category: "COCINA",
@@ -95,7 +95,7 @@ export const products: ProductsProps[] = [
 
   {
     id: 11,
-    description: "Maceta de sexo sexual",
+    description: "Maceta de ejemplo 11",
     price: 150,
     src: [catalog, catalog2, catalog3],
     category: "ACCESORIOS",
@@ -103,7 +103,7 @@ export const products: ProductsProps[] = [
   },
   {
     id: 12,
-    description: "Maceta de sexo sexual",
+    description: "Maceta ejemplo 12",
     price: 350,
     src: [catalog, catalog2, catalog3],
     category: "ACCESORIOS",

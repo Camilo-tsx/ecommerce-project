@@ -19,7 +19,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="header-container">
+    <header className="header-container">
       <i className="bi bi-list burger-menu" onClick={toggleBurgerMenu}></i>
       <a href="/" className="homelogo-link">
         <img className="image-Logo" src={logo} alt="image-logo" />
@@ -29,6 +29,6 @@ export const Header = () => {
       <BurgerMenu toggleMenu={toggleBurgerMenu} menuIsOpen={isBurgerMenuOpen} />
       <OverlayMenu isOpen={isBurgerMenuOpen} onClose={toggleBurgerMenu} />
       <OverlayMenu isOpen={isCartOpen} onClose={toggleCartMenu} />
-    </div>
+    </header>
   );
 };

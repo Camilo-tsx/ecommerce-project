@@ -130,3 +130,13 @@
   margin-right: 0.5rem;
   font-size: 0.9rem;
 }
+
+.social-container a {
+  text-decoration: none;
+  color: grey;
+  transition: color 0.2s ease-in-out;
+}
+
+.social-container a:hover {
+  color: rgb(0, 0, 0);
+}
