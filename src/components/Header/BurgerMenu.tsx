@@ -13,9 +13,17 @@ export const BurgerMenu = ({ menuIsOpen, toggleMenu }: BurgerMenuProps) => {
       <div>
         <ul className="ul-links">
           {navLinks.map(links => (
-            <a href={links.href} key={links.key}>
-              {links.label}
-            </a>
+            <li key={links.key}>
+              <a
+                href={links.href}
+                onClick={e => {
+                  e.preventDefault();
+                  window.location.href = links.href;
+                }}
+              >
+                {links.label}
+              </a>
+            </li>
           ))}
         </ul>
       </div>
