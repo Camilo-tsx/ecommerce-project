@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Deco Cerámicas — Frontend E-commerce Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **frontend** of an e-commerce project built with **React**, designed for product discovery, filtering, and cart management. The application was created using modern tools and libraries, with a focus on learning architecture, TypeScript, and scalable component design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **React + TypeScript**
+- **Vite** — blazing fast dev environment
+- **React Router DOM** — client-side routing
+- **React Context API** — global state for cart
+- **React Hook Form** + **Zod** — form handling and schema validation
+- **Vanilla CSS** (to be improved) — layout and styling
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 🛍️ Product listing with dynamic category filtering
+- 🔍 Product detail pages with full specs
+- 🛒 Add-to-cart functionality using React Context
+- 🧭 Routing with `react-router-dom`
+- 💡 Form components with validation (e.g., for future checkout or contact flows)
+- 🧪 Local mock data using in-memory arrays (no backend yet)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 📁 Project Structure
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+The current architecture is functional but recognized as suboptimal due to this being one of my first serious projects. Refactoring and modularization are planned in upcoming versions to align with clean architecture principles.
+
+---
+
+## 🧠 About the Cart System
+
+The cart system is implemented using the **Context API**, allowing any product component across the app to interact with the cart (add, remove, display) without prop drilling. This global state design simulates a shopping experience without backend dependencies for now.
+
+---
+
+## 🛠️ Future Improvements
+
+- 📱 **Responsive design**: Media queries and layout responsiveness need refinement.
+- 🧱 **Architecture**: Folder structure, separation of concerns, and component reuse will be optimized.
+- 🌐 **Backend integration**: A custom backend using **Node.js (vanilla)** is planned to replace the current in-memory data structure.
+- 💬 **User feedback**: Toast notifications or modals to improve UX.
+
+---
